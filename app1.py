@@ -17,7 +17,7 @@ from docx.enum.style import WD_STYLE_TYPE
 from io import BytesIO
 import re
 
-st.set_page_config(page_title="LISA : LLM Informed Statistical Analysis", page_icon=":books:", layout="wide")
+st.set_page_config(page_title="SIRA : LLM Informed Statistical Analysis", page_icon=":books:", layout="wide")
 
 if 'df' not in st.session_state:
     st.session_state.df = None
@@ -103,7 +103,7 @@ with st.sidebar:
         st.markdown("## How to use\n"
             "1. Enter your [Groq API key](https://console.groq.com/keys) below🔑\n" 
             "2. Upload a CSV file📄\n"
-            "3. Let LISA do its work!!!💬\n")
+            "3. Let SIRA do its work!!!💬\n")
     
     groq_api_key = st.text_input("Enter your Groq API key:", type="password",
             placeholder="Paste your Groq API key here (gsk_...)",
@@ -144,9 +144,9 @@ You must output the SQL query that answers the question in a single line.
 prompt = PromptTemplate.from_template(template=template)
 
 with tab1:
-    st.header("Welcome to LISA: LLM Informed Statistical Analysis 🎈", divider='rainbow')
-    st.markdown("LISA is an innovative platform designed to automate your data analysis process using advanced Large Language Models (LLM) for insightful inferences. Whether you're a data enthusiast, researcher, or business analyst, LISA simplifies complex data tasks, providing clear and comprehensible explanations for your data.")
-    st.markdown("LISA combines the efficiency of automated data processing with the intelligence of modern language models to deliver a seamless and insightful data analysis experience. Empower your data with LISA!")
+    st.header("Welcome to SIRA: LLM Informed Statistical Analysis 🎈", divider='rainbow')
+    st.markdown("SIRA is an innovative platform designed to automate your data analysis process using advanced Large Language Models (LLM) for insightful inferences. Whether you're a data enthusiast, researcher, or business analyst, SIRA simplifies complex data tasks, providing clear and comprehensible explanations for your data.")
+    st.markdown("SIRA combines the efficiency of automated data processing with the intelligence of modern language models to deliver a seamless and insightful data analysis experience. Empower your data with SIRA!")
     st.divider()
     
     uploaded_file = st.file_uploader("Upload a CSV file", type=['csv'])
@@ -344,7 +344,7 @@ with tab3:
                 list_number_style.paragraph_format.left_indent = Inches(0.25)
                 list_number_style.paragraph_format.first_line_indent = Inches(-0.25)
             
-            doc.add_heading('LISA: LLM Informed Statistical Analysis Report', 0)
+            doc.add_heading('SIRA: LLM Informed Statistical Analysis Report', 0)
             
             for key, selected in selected_sections.items():
                 if selected:
@@ -361,7 +361,7 @@ with tab3:
             st.download_button(
                 label="Download Report",
                 data=bio.getvalue(),
-                file_name="LISA_Report.docx",
+                file_name="SIRA_Report.docx",
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
             )
     else:
@@ -371,7 +371,7 @@ with tab3:
 with tab4:
     st.header("LLM Model Card",divider="rainbow")
     
-    st.markdown("In our innovative project LISA (LLM Informed Statistical Analysis), we are harnessing the power of Groq-hosted large language models (LLMs) to revolutionize the way statistical analysis is performed and interpreted. Groq’s platform plays a pivotal role in enabling LISA to deliver accurate, fast, and insightful data analysis by providing access to highly optimized, open-source LLMs that are tailored for complex data processing tasks.")
+    st.markdown("In our innovative project SIRA (LLM Informed Statistical Analysis), we are harnessing the power of Groq-hosted large language models (LLMs) to revolutionize the way statistical analysis is performed and interpreted. Groq’s platform plays a pivotal role in enabling SIRA to deliver accurate, fast, and insightful data analysis by providing access to highly optimized, open-source LLMs that are tailored for complex data processing tasks.")
     
     st.markdown("Groq is the AI infrastructure company that delivers fast AI inference.The LPU™ Inference Engine by Groq is a hardware and software platform that delivers exceptional compute speed, quality, and energy efficiency.")
     

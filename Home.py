@@ -52,7 +52,7 @@ def load_sidebar():
             st.markdown("## How to use\n"
             "1. Enter your [Groq API key](https://console.groq.com/keys) below🔑\n" 
             "2. Upload a CSV file📄\n"
-            "3. Let LISA do its work!!!💬\n")
+            "3. Let SIRA do its work!!!💬\n")
         
         st.session_state['groq_api_key'] = st.text_input("Enter your Groq API key:", type="password",
                                                         placeholder="Paste your Groq API key here (gsk_...)",
@@ -84,9 +84,9 @@ def Home():
     tab1, tab2, tab3= st.tabs(["Home", "ChatBot","LLM Model Card"])
     
     with tab1:
-        st.header("Welcome to LISA: LLM Informed Statistical Analysis 🎈")
-        st.markdown("LISA is an innovative platform designed to automate your data analysis process using advanced Large Language Models (LLM) for insightful inferences. Whether you're a data enthusiast, researcher, or business analyst, LISA simplifies complex data tasks, providing clear and comprehensible explanations for your data.")
-        st.markdown("LISA combines the efficiency of automated data processing with the intelligence of modern language models to deliver a seamless and insightful data analysis experience. Empower your data with LISA!")
+        st.header("Welcome to SIRA: LLM Informed Statistical Analysis 🎈")
+        st.markdown("SIRA is an innovative platform designed to automate your data analysis process using advanced Large Language Models (LLM) for insightful inferences. Whether you're a data enthusiast, researcher, or business analyst, SIRA simplifies complex data tasks, providing clear and comprehensible explanations for your data.")
+        st.markdown("SIRA combines the efficiency of automated data processing with the intelligence of modern language models to deliver a seamless and insightful data analysis experience. Empower your data with SIRA!")
         st.divider()
         
         if 'df' not in st.session_state:
@@ -338,7 +338,7 @@ def Home():
     with tab3:
         st.header("LLM Model Card")
         
-        st.markdown("In our innovative project LISA (LLM Informed Statistical Analysis), we are harnessing the power of Groq-hosted large language models (LLMs) to revolutionize the way statistical analysis is performed and interpreted. Groq’s platform plays a pivotal role in enabling LISA to deliver accurate, fast, and insightful data analysis by providing access to highly optimized, open-source LLMs that are tailored for complex data processing tasks.")
+        st.markdown("In our innovative project SIRA (LLM Informed Statistical Analysis), we are harnessing the power of Groq-hosted large language models (LLMs) to revolutionize the way statistical analysis is performed and interpreted. Groq’s platform plays a pivotal role in enabling SIRA to deliver accurate, fast, and insightful data analysis by providing access to highly optimized, open-source LLMs that are tailored for complex data processing tasks.")
         
         st.markdown("Groq is the AI infrastructure company that delivers fast AI inference.The LPU™ Inference Engine by Groq is a hardware and software platform that delivers exceptional compute speed, quality, and energy efficiency.")
         

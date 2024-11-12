@@ -14,7 +14,7 @@ from statistical_analysis import statistical_analysis1
 
 # Set page configuration
 st.set_page_config(
-    page_title="LISA: LLM Informed Statistical Analysis",
+    page_title="SIRA: LLM Informed Statistical Analysis",
     page_icon=":books:",
     layout="wide"
 )
@@ -26,14 +26,14 @@ if 'df' not in st.session_state:
 # Sidebar menu
 with st.sidebar:
     # Title with centered alignment
-    st.markdown("<h2 style='text-align: center;'>LISA Menu</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center;'>SIRA Menu</h2>", unsafe_allow_html=True)
 
     # Subtitle with centered alignment
     st.markdown("<h4 style='text-align: center;'>Navigate through the sections:</h4>", unsafe_allow_html=True)
     
     selected = option_menu(
         'Main Menu',
-        ['Home', 'Visualisation', 'Classification', 'Statistical Analysis'],
+        ['Home', 'VisuaSIRAtion', 'Classification', 'Statistical Analysis'],
         icons=['house', 'bar-chart-line', 'list-check', 'clipboard-data'],
         default_index=0,
         menu_icon="cast"
@@ -42,7 +42,7 @@ with st.sidebar:
 # Load respective page based on user selection
 if selected == "Home":
     Home()
-elif selected == "Visualisation":
+elif selected == "VisuaSIRAtion":
     visualization()
     load_sidebar()
 elif selected == "Classification":
