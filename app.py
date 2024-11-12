@@ -42,7 +42,7 @@ with st.sidebar:
 # Load respective page based on user selection
 if selected == "Home":
     Home()
-elif selected == "VisuaSIRAtion":
+elif selected == "Visualisation":
     visualization()
     load_sidebar()
 elif selected == "Classification":
