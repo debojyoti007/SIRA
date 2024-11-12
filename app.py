@@ -33,7 +33,7 @@ with st.sidebar:
     
     selected = option_menu(
         'Main Menu',
-        ['Home', 'VisuaSIRAtion', 'Classification', 'Statistical Analysis'],
+        ['Home', 'visualization', 'Classification', 'Statistical Analysis'],
         icons=['house', 'bar-chart-line', 'list-check', 'clipboard-data'],
         default_index=0,
         menu_icon="cast"
